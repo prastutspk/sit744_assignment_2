@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+          background-image: url("{{ url_for('static', filename='images/recy1.jpeg') }}");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+    <h1>The image is classified as: </h1>
+    <p>
+        {% if class_label == 1 %}
+        Recyclable
+        {% else %}
+            Organic
+        {% endif %}
+    </p>
+</body>
+</html>

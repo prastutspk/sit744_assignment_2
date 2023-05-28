@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Image Upload</title>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+          background-image: url("{{ url_for('static', filename='images/recy1.jpeg') }}");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+        
+        .container {
+          width: 400px;
+          margin: 50px auto;
+        }
+        
+        h1 {
+          color: #333;
+        }
+        
+        .upload-form {
+          margin-top: 30px;
+        }
+        
+        .upload-form input[type="file"] {
+          margin-top: 10px;
+        }
+        
+        .upload-btn {
+          margin-top: 20px;
+        }
+        
+      </style>
+      </head>
+<body>
+    <div class="container">
+    <h1>Please upload your Image here</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <input type="submit" value="Upload">
+    </form>
+</div>
+</body>
+</html>
